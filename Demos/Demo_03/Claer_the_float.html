@@ -1,0 +1,80 @@
+<!--
+清除浮动的方法
+1.额外标签法也称为隔墙法，是W3C推荐的做法。
+2.父级添加 overflow属性
+3.父级添加after伪元素
+4.父级添加双伪元素
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clear the float</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+
+        }
+
+        /*伪元素清除浮动*/
+        .clear-fix:before, .clear-fix:after {
+            content: "";
+            display: table;
+        }
+
+        .clear-fix:after {
+            clear: both;
+        }
+
+        .clear-fix {
+            /* IE6,7专有*/
+            *zoom: 1;
+        }
+
+        .top {
+            /*overflow: hidden;!*清除浮动,无法显示溢出的盒子*!*/
+            background-color: white;
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .top > div {
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            color: purple;
+            font-size: 18px;
+            width: 100px;
+            height: 100px;
+            background-color: #ff6700;
+            opacity: 0.5;
+            border: 1px dashed black;
+            margin: 0 200px;
+        }
+
+        .footer {
+            background-color: #5E6E7E;
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .clear-float {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="top clear-fix">
+    top
+    <div>float-box-1</div>
+    <div>float-box-2</div>
+    <!-- 必须是块级元素才能清除浮动  -->
+    <!--    <br class="clear-float">-->
+</div>
+<div class="footer"><p>footer</p></div>
+
+</body>
+</html>

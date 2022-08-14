@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>button</title>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        ul > li{
+            list-style: none;
+            border:1px solid black ;
+            display: inline-block;
+            padding: 0 8px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        ul>#page-1 {
+            border: none;
+
+        }
+        .triangle {
+            width: 0;
+            border-color: transparent black black transparent;
+            border-style: solid;
+            border-width: 10px;
+            border-bottom-right-radius: 50%;
+            margin: 0 100px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<ul>
+    <li class="home-page"><a href="#">首页</a></li>
+    <li class="preview-page"><a href="#">&lt;上一页</a></li>
+    <li id="page-1"><a href="#" >1</a></li>
+    <li id="page-2"><a href="#" >2</a></li>
+    <li id="page-3"><a href="#" >3</a></li>
+    <li id="page-4"><a href="#" >4</a></li>
+    <li id="page-5"><a href="#" >5</a></li>
+    <li id="page-6"><a href="#" >6</a></li>
+    <li id="page-7"><a href="#" >7</a></li>
+    <li id="page-8"><a href="#" >8</a></li>
+    <li id="page-9"><a href="#" >9</a></li>
+    <li id="page-10"><a href="#" >...</a></li>
+    <li class="next-page"><a href="#">&gt;下一页</a></li>
+    <li class="end-page"><a href="#">尾页</a></li>
+</ul>
+
+<br>
+<br>
+<div class="triangle"></div>
+
+</body>
+</html>

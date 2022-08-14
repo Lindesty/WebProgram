@@ -1,0 +1,207 @@
+<!--
+模块要求:
+1. 能够说出为什么需要浮动
+2. 能够说出浮动的排列特性
+3. 能够说出3种最常见的布局方式
+4. 能够说出为什么需要清除浮动
+5. 能够写出至少2种清除浮动的方法
+
+1.脱离标准普通流的控制（浮）移动到指定位置（动），（俗称脱标）
+2.浮动的盒子不再保留原先的位置
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        body {
+            background-color: #b0b0b0;
+        }
+
+        div.float {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            border: 1px dashed black;
+            font-family: "Cascadia Mono", serif;
+        }
+
+        div.guide-bar {
+            width: 540px;
+            height: 100px;
+        }
+        div.guide-bar > p {
+            width: 340px;
+            float: right;
+
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="guide-bar">
+    <div class="float left">left</div>
+    <span>float属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘。</span>
+    <div class="float right">right</div>
+</div>
+
+
+<div class="content-body">
+    <h2 id="title1">Lorem.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda beatae iste, laboriosam nemo nobis non
+        placeat provident repellendus soluta. Accusantium ducimus mollitia repellat. Cum dolorem dolores ducimus
+        expedita facilis?</p>
+    <p>Adipisci aliquid aspernatur assumenda consectetur nihil obcaecati possimus quae quasi qui, quis repudiandae sit
+        totam, velit? Animi, deserunt dolorem fuga ipsum, laudantium nemo nostrum placeat quo sequi similique soluta
+        tempora?</p>
+    <p>Ab aliquid blanditiis deserunt distinctio doloremque dolores eligendi error, exercitationem incidunt nostrum odit
+        officia quasi reiciendis reprehenderit rerum soluta, suscipit! Culpa distinctio, expedita iusto maiores
+        quibusdam quod repudiandae sit vel.</p>
+    <p>A accusamus alias consequatur ducimus earum eius fuga iste laboriosam laudantium maxime modi nihil nisi numquam
+        odit officia officiis quae qui quia quos repellendus sed tempora tenetur vitae voluptate, voluptatum.</p>
+    <p>Asperiores at aut eligendi labore nemo non porro voluptatem! A alias aspernatur delectus illum modi molestias
+        quasi reprehenderit voluptate. At corporis, cumque deserunt nobis porro quisquam sunt tempora totam vel!</p>
+    <h2 id="title2">Eligendi!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut consequatur dolore, hic laudantium magni nemo
+        nulla odit officia totam vero voluptate! Beatae dolorem illo maiores nisi ratione totam voluptas!</p>
+    <p>Ad architecto autem commodi consectetur, deleniti dicta esse et harum, laudantium maxime molestiae nobis nulla
+        perspiciatis quae quasi quia ratione repudiandae tempora velit voluptates. Earum ipsum maiores molestiae natus
+        quaerat?</p>
+    <p>Aspernatur doloremque, ducimus esse facilis laudantium quaerat quia quod repellat sequi voluptatibus. Id ipsam
+        iste neque quas quod saepe temporibus velit! Aspernatur eaque ex expedita odit optio perferendis saepe
+        velit.</p>
+    <p>Ad animi aperiam architecto consequatur culpa deleniti dolorem doloremque est, et facilis, fuga hic incidunt ipsa
+        iusto laboriosam nam perferendis provident quam, quis rem repellat saepe sint soluta suscipit voluptas.</p>
+    <p>Assumenda cum fugit modi non rerum! Corporis cumque dolor eius nihil numquam optio soluta velit voluptate
+        voluptatibus. A, cupiditate delectus dolores fugit in ipsam magnam maxime praesentium sit unde vero.</p>
+    <h2 id="title3">Velit.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eaque eos modi porro, quae quibusdam
+        voluptatum. Consequuntur rerum tempore unde? Animi laboriosam, sit! Consectetur cumque magnam mollitia neque
+        quos voluptates?</p>
+    <p>Alias ducimus enim facere laborum optio ut voluptate? Ad esse, illo quis soluta totam voluptas? Aliquam,
+        aspernatur ducimus ea in itaque, laborum molestiae nisi pariatur placeat porro quidem sapiente suscipit.</p>
+    <p>Alias dicta distinctio itaque labore nobis quaerat quidem quis sapiente similique! A, at corporis culpa et
+        eveniet, explicabo hic illum iure laudantium magni minima nesciunt numquam ratione sequi voluptatem
+        voluptatum!</p>
+    <p>Aliquid consectetur cupiditate eligendi eos illum ipsa nulla ratione? Assumenda exercitationem inventore totam!
+        Ab accusamus at deleniti dolorem doloremque id ipsum neque obcaecati quia, reiciendis similique ullam? Commodi
+        ducimus, vitae?</p>
+    <p>Amet atque autem cum fuga, fugiat iusto laborum nihil porro sunt velit. Dolore facilis laborum quaerat, quasi
+        suscipit voluptates? Alias animi corporis cum dolorum eveniet ex officia omnis quisquam rem!</p>
+    <h2 id="title4">Tempore.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi autem enim exercitationem nihil officiis
+        provident quasi quos reprehenderit tenetur! Ad dolorem illo libero nisi pariatur qui unde? Explicabo,
+        impedit?</p>
+    <p>Amet aut commodi consequatur cum cupiditate debitis deleniti dicta doloribus ducimus eligendi error, facilis
+        fugiat, libero magni molestias necessitatibus nobis odio pariatur quos ratione repellendus sapiente tempore
+        totam ullam vel.</p>
+    <p>Dolorum facere necessitatibus quam similique veritatis? Atque, blanditiis cum, dolores explicabo iste laboriosam
+        nostrum placeat quis quo reprehenderit sequi voluptatibus? A deserunt dolore illo molestiae non nulla placeat,
+        quam quisquam!</p>
+    <p>Animi architecto, consequuntur, deleniti distinctio dolorem dolores eligendi, eveniet fugit id in nulla placeat
+        vero. Assumenda doloribus odio ratione! A asperiores dolores excepturi ipsa iusto perspiciatis quaerat
+        reprehenderit veniam vero!</p>
+    <p>Delectus et illo maxime, quaerat quidem tempore! Accusantium ad consequatur culpa ducimus itaque libero, minus
+        mollitia odit quae rem reprehenderit voluptates! Beatae culpa ea eaque non recusandae, sint tenetur vel!</p>
+    <h2 id="title5">Inventore!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aspernatur beatae cum dolores earum error
+        facere harum in labore mollitia nihil nisi perspiciatis, quia, saepe similique ut vel vero.</p>
+    <p>Aliquid, amet aspernatur consectetur cupiditate delectus ducimus eius eveniet fugiat hic id laborum minima
+        molestiae necessitatibus odio officia praesentium quas quasi qui quia quibusdam sed veritatis voluptatem
+        voluptatum? Incidunt, natus?</p>
+    <p>Accusantium adipisci beatae harum mollitia nulla quo quod sed tempore vitae. Amet animi consectetur distinctio
+        est fuga nemo nesciunt omnis repellendus velit veniam? Aspernatur assumenda delectus doloribus mollitia, odio
+        quo.</p>
+    <p>Adipisci assumenda autem consequatur eos eum ex fugit illo in itaque laudantium maiores maxime nemo nihil nulla,
+        pariatur perferendis perspiciatis sequi suscipit temporibus ut veniam vitae voluptas! Nostrum perferendis,
+        repellat.</p>
+    <p>Alias illo in labore modi nobis placeat praesentium quis reiciendis rem ut! Aspernatur aut dignissimos dolore
+        iusto, labore, magni natus neque nobis nulla odit, officiis qui quis temporibus vitae voluptatum.</p>
+    <h2 id="title6">Sunt?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet illum ipsa, ipsam iusto numquam! Autem,
+        dicta dolor error, hic impedit ipsa ipsam itaque, necessitatibus nobis praesentium quam sunt vel!</p>
+    <p>Incidunt magni necessitatibus porro suscipit tempore vel voluptate? Autem dolorem dolorum et harum impedit ipsam
+        libero pariatur quis vel voluptatem! Aperiam, eius fugiat illo in iure magni perspiciatis ut velit!</p>
+    <p>Asperiores consequuntur dicta dolores eveniet molestiae natus tenetur velit. Ad id illum minus neque nobis non
+        nostrum provident, quas saepe voluptate? A aperiam illo labore necessitatibus possimus praesentium recusandae
+        repellendus.</p>
+    <p>Accusamus aperiam, at deserunt dolorum eligendi libero odit officiis provident, quasi quo veritatis,
+        voluptatibus. Ab aspernatur deleniti eius harum molestias necessitatibus nesciunt porro quam repudiandae veniam.
+        Illum quia sequi voluptatem!</p>
+    <p>Alias cupiditate distinctio ea explicabo fugiat minima officia pariatur sapiente. Dolore, ea illum. Debitis eaque
+        labore magni necessitatibus quas ratione reprehenderit vel voluptas. Earum eos hic nihil quasi rem ullam.</p>
+    <h2 id="title7">Enim.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolore dolores excepturi exercitationem, fuga
+        harum reiciendis vitae. Assumenda dolor enim reiciendis soluta voluptas? Consequuntur earum eius, est molestiae
+        officiis praesentium.</p>
+    <p>Ea error est fuga harum iusto labore molestiae nobis odit optio pariatur quam quidem quo, reiciendis rerum,
+        tenetur, unde veritatis. Ab amet eveniet odio, quo repellat sapiente voluptate. Doloremque, velit.</p>
+    <p>Adipisci asperiores debitis facere id nesciunt quia quisquam tempore! Animi delectus, distinctio dolorem eius
+        error eveniet facilis minima molestias, nesciunt nulla obcaecati officia, officiis reiciendis repellat
+        repellendus tempora temporibus voluptatem.</p>
+    <p>Corporis dolores in necessitatibus quas rerum? Aliquam at atque, deleniti dolore eligendi esse fugiat hic
+        inventore ipsa maiores minima, nihil officia porro provident quas rem unde voluptate! Debitis, ea, eaque.</p>
+    <p>Ab architecto autem eius illum laboriosam nisi perferendis praesentium repellat tenetur voluptatem. Corporis
+        debitis dicta earum est facere illum impedit nam, nisi nobis, nulla praesentium provident quidem repellendus
+        unde voluptates.</p>
+    <h2 id="title8">Fugit.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti distinctio dolorum eaque excepturi
+        expedita facere iusto labore, minima minus, natus nesciunt nisi quisquam, reiciendis repellendus sed temporibus
+        velit voluptatum!</p>
+    <p>Consectetur, eos, esse facere hic impedit iste laborum, laudantium maiores modi nobis nulla praesentium quidem
+        quos sapiente similique sunt voluptas? Ad doloremque esse fugiat fugit iure laudantium quos sit ut.</p>
+    <p>Aspernatur aut blanditiis doloremque dolores eaque earum eius expedita facere hic iure iusto magnam maiores nam
+        numquam porro, praesentium quaerat quas repellat reprehenderit sequi sint ullam voluptatibus! Est, repudiandae,
+        sunt!</p>
+    <p>Blanditiis consequatur culpa dicta eius et, itaque, magni nam numquam quaerat quia, quos repellat sequi vel! A,
+        at commodi consequuntur id, molestias non nostrum perferendis, quam repudiandae sunt vel voluptatibus!</p>
+    <p>Amet aspernatur consequatur consequuntur dicta distinctio, doloribus eaque earum eveniet ex excepturi impedit
+        inventore iure labore libero nam nihil numquam odit, officiis possimus praesentium provident qui quos sed velit
+        voluptatum?</p>
+    <h2 id="title9">Sed?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae blanditiis consequuntur dolorum odio
+        perferendis reprehenderit tempora unde voluptates voluptatum? Atque consequuntur corporis deleniti iusto
+        molestiae, odit quia ut voluptates!</p>
+    <p>A aut cumque dolorum eligendi et ex expedita explicabo id illo itaque, labore laboriosam maxime natus odio odit
+        perspiciatis, quam quis repellendus repudiandae sequi sit suscipit tempora voluptate voluptatem
+        voluptatibus!</p>
+    <p>Adipisci dignissimos dolorem fugiat in, laborum molestiae numquam recusandae repudiandae saepe soluta. Amet
+        consectetur delectus eaque eius eos excepturi illum incidunt ipsam itaque magnam, magni molestiae, nesciunt
+        nostrum pariatur sunt.</p>
+    <p>Aperiam quam tenetur totam. Ab accusantium aliquid aspernatur assumenda deleniti facere fugit, id laborum nihil
+        omnis qui quod repudiandae temporibus voluptas voluptate. Consequuntur delectus, laudantium provident quo
+        repudiandae suscipit vitae.</p>
+    <p>Aliquam asperiores at corporis deleniti doloremque dolorum eligendi est eum eveniet ex facere id, in laborum
+        molestias natus neque non, odit pariatur placeat quia ratione reprehenderit suscipit veritatis vero
+        voluptate!</p>
+    <h2 id="title10">Totam.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at aut cum eligendi explicabo fuga impedit iste
+        itaque magni obcaecati pariatur quaerat quidem ratione, suscipit temporibus tenetur veritatis? Distinctio,
+        quis.</p>
+    <p>Aliquam atque commodi cupiditate debitis delectus deserunt eaque earum eius eligendi eum harum inventore
+        laboriosam magnam magni minus modi necessitatibus odio odit, perferendis porro quisquam quod repellendus
+        sapiente tempore tenetur?</p>
+    <p>Ad aspernatur atque commodi, cumque dolor dolorem dolorum eius est ex expedita illum ipsa ipsam laudantium
+        necessitatibus non perspiciatis quas quidem sint tempore voluptatum! Ad cumque ducimus molestiae officiis
+        repudiandae!</p>
+    <p>Aperiam assumenda consectetur cumque debitis dolor, dolorum earum ex id iusto libero maxime modi molestiae nam
+        nemo nihil non odit optio perferendis provident quibusdam, similique, sint suscipit velit veniam voluptatem.</p>
+    <p>Blanditiis deleniti dolore exercitationem itaque? Adipisci animi dolore ducimus eaque non optio perspiciatis
+        ratione repudiandae ullam voluptates. Amet eveniet harum ipsa ipsam neque nobis nostrum quasi. Dolore id nemo
+        temporibus?</p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+    <style>
+        p {
+            text-indent: 2em;
+        }
+        .clear-fix:before, .clear-fix:after {
+            content: "";
+            display: table;
+        }
+
+        .clear-fix:after {
+            clear: both;
+        }
+
+        .clear-fix {
+            *zoom: 1;
+        }
+
+        body > * {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .banner > img {
+            width: 1000px
+        }
+        .guide-bar {
+            border-bottom:1px dashed black;
+            height: 30px;
+            text-align: left;
+            margin-top: 3px;
+        }
+        .body {
+            border-bottom: 1px dashed black;
+        }
+        .body > h3 {
+            text-align: center;
+        }
+        .body > span {
+            margin: 0 150px 10px;
+        }
+        .body > .float-left {
+            float: left;
+        }
+        .body > .float-right{
+            float: right;
+        }
+        .footer > ul {
+            list-style: none;
+            float: left;
+            width: 400px;
+            margin: 0 0 0 20px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="banner">
+    <img src="./img/banner.jpg" alt="banner-img">
+</div>
+<div class="guide-bar">
+    <span>当前位置:</span>
+    <a href="#">首页</a>
+    &gt;
+    <a href="#">关于我们</a>
+</div>
+<div class="body clear-fix">
+    <h3>文章详细标题</h3>
+    <p>水墨（风格）摄影和传统的水墨画一样，现市面上出现的水墨摄影作品，按题材，
+        可以分为风景和花鸟，对应国画中的山水画和花鸟画；按手法和意境，可以分为
+        抽象和具象，对应国画中的写意和工笔。 水墨风格的摄影照片虽然免不了使用Ph
+        otoshop等软件的后期加工，但是这并不意味着可以任意扭曲原照片。全息摄影是
+        指一种记录被摄物体反射波的振幅和位相等全部信息的新型摄影技术。普通摄影是
+        记录物体 面上的光强分布，它不能记录物体反射光的位相信息，因而失去了立体感
+        。全息摄影采用激光作为照明光源，并将光源发出的光分为两束，一束直接射向感光
+        片，另一束经被摄物的反射后再射向感光片。人眼直接去看这种感光的底片，只能看到
+        像指纹一样的干涉条纹，但如果用激光去照射它，人眼透过底片就能看到原来被拍摄物体
+        完全相同的三维立体像。一张全息摄影图片即使只剩下一小部分，依然可以重现全部景物
+        。全息摄影可应用于工业上进行无损探伤，超声全息，全息显微镜，全息摄影存储器,全息电
+        影和电视等许多方面。</p>
+    <span class="float-left">上一篇<a href="#">美丽的半岛</a></span>
+    <span class="float-right">下一篇<a href="#">寒冷的男孩</a></span>
+</div>
+<div class="footer">
+    <h3>推荐信息</h3>
+    <ul>
+        <li><a href="#">推荐文章</a></li>
+        <li><a href="#">墨风格的摄影</a></li>
+        <li><a href="#">墨风格的摄影照片虽</a></li>
+        <li><a href="#">推荐文章</a></li>
+        <li><a href="#">墨风格的摄影照片虽然免不</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">推荐文章</a></li>
+        <li><a href="#">摄物体完全相同的三维立体像</a></li>
+        <li><a href="#">被拍摄物体的三维立体像</a></li>
+        <li><a href="#">被拍摄物体完全相同的三维</a></li>
+        <li><a href="#">被拍摄物体完全相体像</a></li>
+    </ul>
+</div>
+
+
+</body>
+</html>

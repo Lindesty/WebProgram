@@ -1,0 +1,145 @@
+<!--
+
+定位：将盒子定在某一个位置，所以定位也是在摆放盒子，按照定位的方式移动盒子。
+定位=定位模式+边偏移。
+定位模式用于指定一个元素在文档中的定位方式。边偏移则决定了该元素的最终位置。
+static 标准流动
+relative 相对定位,移动到相对于它原来的位置,仍然占用的空间
+absolute 绝对定位,以有定位的父元素为基准定位,不占用位置
+-->
+<!doctype html>
+<html lang="zn-ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo_04</title>
+    <style>
+        .box {
+            margin: 50px auto;
+            width: 409px;
+        }
+
+        .box > a {
+            background-image: url("./img/background_image.png");
+            background-size: 409px;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 215px;
+            width: 409px;
+            float: left;
+            box-shadow: 0 0 15px 0 rgb(0, 0, 0, 10%);
+            position: relative;
+        }
+
+        .content {
+            height: 177px;
+            margin: 0;
+
+        }
+
+        .box > a > * {
+            float: left;
+        }
+
+        .box input {
+            width: 409px;
+            height: 38px;
+            background-color: #ff6700;
+            color: white;
+            border: none;
+        }
+        .box input:hover{
+            opacity: 0.8;
+        }
+        .content > h3 {
+            font-size: 16px;
+            color: black;
+            line-height: 24px;
+            height: 24px;
+            margin: 25px 20px 0;
+        }
+
+        .content > p {
+            color: gray;
+            font-size: 14px;
+            margin: 12px 20px;
+        }
+
+        .label {
+            width: 184px;
+            height: 20px;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+
+        .label-left {
+            height: 20px;
+            width: 70px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            background-color: #ff6700;
+            float: left;
+        }
+
+        .label-right {
+            float: right;
+            height: 18px;
+            width: 106px;
+            border: 1px solid #ff6700;
+            color: #ff6700;
+            text-align: center;
+            line-height: 18px;
+        }
+
+
+        .corner > img {
+            height: 30px;
+            width: 131px;
+            position: absolute;
+            right: 0;
+            top: -11px;
+            display: block;
+            z-index: 1;
+        }
+
+        .corner > span {
+            position: absolute;
+            right: 28px;
+            top: -7px;
+            font-size:16px;
+            font-weight: bolder;
+            color: white;
+            z-index: 2;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <a href="#">
+        <div class="content">
+            <h3>阿里云试用中心</h3>
+            <p>100+款试用云产品，最长免费试用12个月</p>
+            <div class="label">
+                <span class="label-left">新品上线</span>
+                <span class="label-right">12个月免费试用</span>
+            </div>
+        </div>
+        <input type="button" value="立即前往">
+        <div class="corner">
+            <span>立即试用</span>
+            <img src="https://img.alicdn.com/imgextra/i4/O1CN01uLVEEB1lLox9qPLIm_!!6000000004803-2-tps-262-60.png" alt="">
+
+
+        </div>
+    </a>
+</div>
+
+
+</body>
+</html>
